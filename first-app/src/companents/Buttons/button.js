@@ -1,7 +1,9 @@
-const Button = () => {
+import './main.scss';
+
+const Button = ({title, subtitle}) => {
     return(
         <button>
-            <h1>Salom chnopka</h1>
+            <span>{title}</span> <span>{subtitle}</span>
         </button>
     )
 }
