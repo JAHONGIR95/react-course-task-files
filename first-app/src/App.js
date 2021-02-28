@@ -1,5 +1,8 @@
 import { Fragment } from 'react';
+
 import Tickets from './Pages/Tickets/Tickets';
+
+import './Assets/styles/App.scss';
 
 
 
