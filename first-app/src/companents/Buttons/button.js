@@ -1,8 +1,8 @@
 import './main.scss';
 
-const Button = ({title, subtitle}) => {
+const Button = ({title, subtitle, btnType}) => {
     return(
-        <button>
+        <button className={`btn ${btnType}`}>
             <span>{title}</span> <span>{subtitle}</span>
         </button>
     )
