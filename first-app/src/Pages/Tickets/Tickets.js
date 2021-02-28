@@ -5,10 +5,12 @@ import './main.scss';
 
 const Tickets = () => {
     return(
-        <>
-            <h1>Tickets</h1>
+        <div className="tickets">
             <Sidebar/>
-        </>
+            <div className="content">
+                Tickets
+            </div>
+        </div>
     );
 }
 

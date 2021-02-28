@@ -6,10 +6,10 @@ import './main.scss';
 
 const Sidebar = () => {
     return(
-        <Fragment>
+        <div className="sidebar">
            <SidebarBtn/>
            <h1>Sidebar</h1>
-        </Fragment>
+        </div>
     );
 }
 
