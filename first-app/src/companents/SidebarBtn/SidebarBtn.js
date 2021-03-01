@@ -1,6 +1,11 @@
-const SidebarBtn = () => {
+import './main.scss';
+
+const SidebarBtn = ({title, icon}) => {
     return(
-        <h1>SidebarBtn</h1>
+        <button className="sidebar-btn">
+            <div>{icon}</div>
+            <span>{title}</span>
+        </button>
     );
 }
 
