@@ -1,9 +1,10 @@
 import './main.scss';
 
 const SidebarBtn = ({title, icon}) => {
+    console.log(icon);
     return(
         <button className="sidebar-btn">
-            <div>{icon}</div>
+            <div className="btn-icon">{icon}</div>
             <span>{title}</span>
         </button>
     );
