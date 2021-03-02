@@ -7,15 +7,22 @@ import {
     ArticlesIcon,
     SettingsIcon,
     SubsIcon,
-} from '../../Assets/styles/Icons/Icons';
+} from '../../Assets/Icons/Icons';
 
 import SidebarBtn from '../../companents/SidebarBtn/SidebarBtn';
+
+import MainLogo from '../../Assets/images/icons/logo.png';
 
 import './main.scss';
 
 const Sidebar = () => {
     return(
         <div className="sidebar">
+
+            <div className="logo-holder">
+                <img src={MainLogo} alt="logo"/>
+                <a href="javascript:void(0)">Dashboard Kit</a>
+            </div>
            <SidebarBtn title="Overview" icon={<ChartIcon/>}/>
            <SidebarBtn title="Tickets" icon={<TicketsIcon/>}/>
            <SidebarBtn title="Ideas" icon={<IdeasIcon/>}/>

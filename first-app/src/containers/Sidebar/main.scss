@@ -4,4 +4,10 @@
     min-height: 100vh;
     padding: 37px 0;
     box-sizing: border-box;
+
+    .logo-holder{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    } 
 }
