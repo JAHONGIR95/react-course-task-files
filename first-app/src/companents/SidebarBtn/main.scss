@@ -19,9 +19,19 @@
         margin-right: 25px;
     }
 
+    .sidebar-svg-icon{
+        fill: #9FA2B4;
+        opacity: 0.4;
+    }
+
     &:hover{
         background: rgba(159, 162, 180, 0.08);
         color: #DDE2FF;
         border-left: 3px solid #DDE2FF;
+
+        .sidebar-svg-icon{
+            fill: #DDE2FF;
+            opacity: 1;
+        }
     }
 }
