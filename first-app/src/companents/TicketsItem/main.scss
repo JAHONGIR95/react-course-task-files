@@ -1,0 +1,75 @@
+.tickets-list-item{
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+    border: 1px solid #DFE0EB;
+
+    &:hover{
+        background-color: #F7F8FC;
+        cursor: pointer;
+    }
+
+    .client-image{
+        margin-right: 24px;
+        border-radius: 50%;
+    }
+
+    .client-status{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin-right: 50px;
+    }
+    .client-name{
+        display: flex;
+        flex-direction: column;
+        width: 170px;
+        margin-right: 50px;
+
+    }
+    .client-date{
+        display: flex;
+        flex-direction: column;
+        width: 120px;
+        margin-right: 70px;
+
+    }
+    .priority{
+        // font-style: normal;
+        
+        font-weight: 400;
+        padding: 5px 12px;
+        font-size: 8px;
+        line-height: 14px;
+        box-sizing: border-box;
+        // display: flex;
+        // align-items: center;
+        text-align: center;
+        // letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #F12B2C;
+        border-radius: 100px;
+    }
+}
+
+.client-top-info{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #252733;
+    margin-bottom: 4px;
+    display: block
+}
+
+.client-next-info{
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #C5C7CD;
+}

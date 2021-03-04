@@ -1,6 +1,6 @@
 import './main.scss';
 
-const TicketsItem = ({avatar, clientTitle, clientStatus, clientName, clientDate, clientDay, clientTime, priority}) => {
+const TicketsItemList = ({avatar, clientTitle, clientStatus, clientName, clientDate, clientDay, clientTime, priority}) => {
     return(
         <div className="tickets-list-item">
             <img src={avatar} className="client-image"/>
@@ -22,3 +22,5 @@ const TicketsItem = ({avatar, clientTitle, clientStatus, clientName, clientDate,
         </div>
     )
 }
+
+export default TicketsItemList;

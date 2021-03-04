@@ -1,4 +1,9 @@
 .tickets{
     display: flex;
-    background-color: ;
+    background-color: #F7F8FC;
+    .content{
+        width: calc(100% - 210px);
+        margin-left: 210px;
+        padding: 0 30px;
+    }
 }
