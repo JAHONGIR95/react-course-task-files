@@ -1,5 +1,7 @@
 import Sidebar from "../../containers/Sidebar/Sidebar";
 
+import TicketsItem from '../../containers/Tickets/TicketsItem';
+
 import './main.scss';
 
 
@@ -9,6 +11,7 @@ const Tickets = () => {
             <Sidebar/>
             <div className="content">
                 Tickets
+                <TicketsItem/>
             </div>
         </div>
     );
