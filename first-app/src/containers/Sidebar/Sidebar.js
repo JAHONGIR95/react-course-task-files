@@ -30,7 +30,6 @@ const Sidebar = () => {
       <SidebarBtn title="Articles" icon={<ArticlesIcon />} />
       <SidebarBtn title="Settings" icon={<SettingsIcon />} />
       <SidebarBtn title="Subscription" icon={<SubsIcon />} />
-      <h1>Sidebar</h1>
     </div>
   );
 };
