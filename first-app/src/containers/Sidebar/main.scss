@@ -6,6 +6,10 @@
     box-sizing: border-box;
     position: fixed;
 
+    .link{
+        text-decoration: none;
+    }
+
     .logo-holder{
         display: flex;
         align-items: center;

@@ -17,6 +17,7 @@ const Tickets = () => {
                 Tickets
                 <Switch>
                     <Route path="/tickets" component={TicketsItem}/>
+                    <Route path="/overview" component={Overview}/>
                 </Switch>
             </div>
         </div>

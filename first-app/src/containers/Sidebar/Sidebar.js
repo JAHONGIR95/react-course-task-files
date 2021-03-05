@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 import {
   ChartIcon,
   TicketsIcon,
@@ -22,8 +24,14 @@ const Sidebar = () => {
         <img src={MainLogo} className="sidebar-logo" alt="logo" />
         <a href="javascript:void(0)">Dashboard Kit</a>
       </div>
-      <SidebarBtn title="Overview" icon={<ChartIcon />} />
-      <SidebarBtn title="Tickets" icon={<TicketsIcon />} />
+      <Link className="link" to="/tickets">
+        <SidebarBtn title="Tickets" icon={<TicketsIcon />} />
+      </Link>
+
+      <Link className="link" to="/overview">
+        <SidebarBtn title="Overview" icon={<ChartIcon />} /> 
+      </Link>
+
       <SidebarBtn title="Ideas" icon={<IdeasIcon />} />
       <SidebarBtn title="Contacts" icon={<ContactsIcon />} />
       <SidebarBtn title="Agents" icon={<AgentsIcon />} />
