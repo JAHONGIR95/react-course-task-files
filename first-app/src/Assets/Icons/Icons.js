@@ -71,5 +71,5 @@ export  {
     AgentsIcon,
     ArticlesIcon,
     SettingsIcon,
-    SubsIcon
-}
+    SubsIcon,
+};
