@@ -1,0 +1,21 @@
+.header{
+    background-color: #0eb80e;
+    
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    &-link{
+        display: inline-block;
+        padding: 0 20px;
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            color: rgb(236, 226, 226);
+        }
+    }
+}

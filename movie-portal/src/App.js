@@ -4,6 +4,8 @@ import {
   Route
 } from 'react-router-dom';
 
+import './assets/styles/App.scss';
+
 import {
   Home,
   Movies,
@@ -12,14 +14,19 @@ import {
   SingleShow
 } from './pages';
 
+import Header from './containers/Header';
+
 function App() {
   return (
     <div>
       <Router>
+
+        <Header/>
+
         <Switch>
           <Route exact path="/" component={Home}/> 
           <Route exact path="/movies" component={Movies}/> 
-          <Route exact path="/tv-show" component={TvShow}/> 
+          <Route exact path="/tv-shows" component={TvShow}/> 
           <Route exact path="/movies/:id" component={SingleMovie}/> 
           <Route exact path="/tv-show/:id" component={SingleShow}/> 
         </Switch>
