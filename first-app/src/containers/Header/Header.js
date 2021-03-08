@@ -4,12 +4,10 @@ import authorPhoto from '../../Assets/images/author.png';
 
 import './Header.scss';
 
-const Header = () => {
+const Header = ({activePage}) => {
     return (
         <div className="header">
-            <div className="header-left">
-                Tickets
-            </div>
+            <div className="header-left">{ activePage }</div>
             <div className="header-right">
                 <img src={searchIcon} alt="" className="search-icon"/>
                 <img src={billIcon} alt="" className="bill-icon"/>

@@ -1,7 +1,7 @@
-const Ideas = () => {
+const Articles = () => {
     return(
-        <h1>Ideas page</h1>
+        <h1>Articles page</h1>
     )
 }
 
-export default Ideas;
+export default Articles;
