@@ -1,0 +1,56 @@
+.movie-card{
+    width: 250px;
+    max-width: 250px;
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 30px;
+    
+    &:hover{
+        .card-title{
+            color: #7fae6a;
+        }
+        
+        .card-date{
+            color: #7fae6a;
+        }
+
+        .card-img{
+            transform: scale(1.1);
+        }
+    }
+    
+    .card-rating{
+        position: absolute;
+        top: 20px;
+        right: 0;
+        background-color: #7fae6a;
+        color: white;
+        padding: 5px 10px;
+    }
+
+    .card-img-holder{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        .card-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: all ease .5s;
+        }
+    }
+    
+    .card-title{
+        color: #000;
+        margin-bottom: 8px;
+        transition: all ease .3s;
+    }
+
+    .card-date{
+        color: #000;
+        transition: all ease .3s;
+
+    }
+}
