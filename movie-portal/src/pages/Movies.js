@@ -6,6 +6,7 @@ import MovieCard from '../components/MovieCard';
 import './pages.scss';
 
 const Movies = () => {
+  
   const [movieList, setMovieList] = useState({
       isFetched: false,
       data: [],
