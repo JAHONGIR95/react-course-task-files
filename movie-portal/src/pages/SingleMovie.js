@@ -106,7 +106,8 @@ const SingleMovie = ({ match }) => {
 
       <p className="movie-overview">{mData.overview}</p>
 
-      <div className="movie-actor">
+      <p className="actor-title">Actors and Actresses</p>   
+      <div className="movie-actor-holder">
         {
           MovieActors.isFetched ? (
             MovieActors.data.cast.map((actor, index) => (

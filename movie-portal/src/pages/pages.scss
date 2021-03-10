@@ -23,6 +23,7 @@
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
+        text-align: center;
         
         .movie-title{
             margin-bottom: 25px;
@@ -52,6 +53,22 @@
         margin: 0 auto;
         margin-bottom: 50px;
         line-height: 30px;
+    }
+
+    .actor-title{
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .movie-actor-holder{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
     }
     
 }
