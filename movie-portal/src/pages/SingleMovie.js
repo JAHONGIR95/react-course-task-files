@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import GenresCard from '../components/GenresCard/GenresCard';
+import GenresCard from "../components/GenresCard/GenresCard";
+import Actors from '../components/Actors/Actors';
 
 const SingleMovie = ({ match }) => {
   const [MovieInfo, setMovieInfo] = useState({
@@ -36,12 +37,49 @@ const SingleMovie = ({ match }) => {
       });
   }, []);
 
+  // actor info creation section is going to start
+
+  const [MovieActors, setMovieActors] = useState({
+    isFetched: false,
+    data: [],
+    error: null,
+  });
+
+  useEffect(() => {
+    axios
+      .get(`https://api.themoviedb.org/3/movie/${match.params.id}/credits`, {
+        params: {
+          api_key: "d2a8ca5d342a4ac27541b9319d594c83",
+        },
+      })
+      .then(function (response) {
+        // console.log(response)
+        setMovieActors({
+          isFetched: true,
+          data: response.data,
+          error: false,
+        });
+      })
+      .catch(function (error) {
+        setMovieActors({
+          isFetched: true,
+          data: [],
+          error: error,
+        });
+      })
+      .then(function () {
+        // always executed
+      });
+    }, []);
+    
+  console.log(MovieActors.data.cast);
   const mData = MovieInfo.data;
-  console.log(mData);
+  // console.log(mData);
+  // console.log(mData.genres[0].name);
 
   return (
     // <h1>SingleMovie {MovieInfo.data.title}</h1>
-    
+
     <div className="single-movie-section">
       <div className="single-movie-top">
         <div className="single-movie-top-left">
@@ -53,23 +91,22 @@ const SingleMovie = ({ match }) => {
         <div className="single-movie-top-right">
           <h1 className="movie-title">{mData.title}</h1>
           <h3 className="movie date">{`Date  ${mData.release_date}`}</h3>
-          <h3 className="movie-duration">{`Duration  ${Math.floor(mData.runtime / 60)} hour ${mData.runtime % 60} minute`}</h3>
-          
+          <h3 className="movie-duration">{`Duration  ${Math.floor(
+            mData.runtime / 60
+          )} hour ${mData.runtime % 60} minute`}</h3>
+          <Actors/>
         </div>
       </div>
 
       <div className="single-movie-main">
         <p className="movie-overview">{mData.overview}</p>
-        {/* {
+        {MovieInfo.isFetched ? (
           mData.genres.map((ganr, index) => (
-            <GenresCard
-              {
-                Janri={ganr.name}
-                key={index}
-              }
-            />
+            <GenresCard Janri={ganr.name} key={index} />
           ))
-        } */}
+        ) : (
+          <p>loading...</p>
+        )}
       </div>
     </div>
   );
