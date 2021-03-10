@@ -104,9 +104,7 @@ const SingleMovie = ({ match }) => {
         </div>
       </div>
 
-      <div className="single-movie-main">
-        <p className="movie-overview">{mData.overview}</p>
-      </div>
+      <p className="movie-overview">{mData.overview}</p>
 
       <div className="movie-actor">
         {
