@@ -74,13 +74,11 @@ const SingleMovie = ({ match }) => {
     
   console.log(MovieActors.data.cast);
   const mData = MovieInfo.data;
-  // console.log(mData);
-  // console.log(mData.genres[0].name);
 
   return (
-    // <h1>SingleMovie {MovieInfo.data.title}</h1>
 
-    <div className="single-movie-section">
+  <div className="single-movie-section">
+      <div className="container">
       <div className="single-movie-top">
         <div className="single-movie-top-left">
           <img
@@ -90,23 +88,42 @@ const SingleMovie = ({ match }) => {
         </div>
         <div className="single-movie-top-right">
           <h1 className="movie-title">{mData.title}</h1>
-          <h3 className="movie date">{`Date  ${mData.release_date}`}</h3>
+          <h3 className="movie-date">{`Date  ${mData.release_date}`}</h3>
           <h3 className="movie-duration">{`Duration  ${Math.floor(
             mData.runtime / 60
           )} hour ${mData.runtime % 60} minute`}</h3>
-          <Actors/>
+          <div className="genre-holder">
+            {MovieInfo.isFetched ? (
+              mData.genres.map((ganr, index) => (
+                <GenresCard Janri={ganr.name} key={index} />
+              ))
+            ) : (
+              <p>loading...</p>
+            )}
+          </div>
         </div>
       </div>
 
       <div className="single-movie-main">
         <p className="movie-overview">{mData.overview}</p>
-        {MovieInfo.isFetched ? (
-          mData.genres.map((ganr, index) => (
-            <GenresCard Janri={ganr.name} key={index} />
+      </div>
+
+      <div className="movie-actor">
+        {
+          MovieActors.isFetched ? (
+            MovieActors.data.cast.map((actor, index) => (
+              <Actors
+                id={index}
+                imgLink={actor.profile_path}
+                name={actor.original_name}
+                key={index}
+              />
           ))
-        ) : (
-          <p>loading...</p>
-        )}
+          ) :(
+            <p>Loading...</p>
+          )
+        }
+      </div>
       </div>
     </div>
   );

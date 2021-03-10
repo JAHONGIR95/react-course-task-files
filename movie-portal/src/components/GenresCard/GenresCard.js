@@ -2,7 +2,9 @@ import './GenresCard.scss';
 
 const GenresCard = ({Janri}) => {
     return (
-        <h4 className="movie-genre">{Janri}</h4>
+        <div className="genre-holder">
+            <h4 className="movie-genre">{Janri}</h4>
+        </div>
     )
 }
 
