@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+import MovieCard from '../components/MovieCard'
+
 import "./pages.scss";
 
 const TopMovies = () => {
@@ -36,15 +38,33 @@ const TopMovies = () => {
         // always executed
       });
   }, []);
-console.log(topMovies.data.results);
+// console.log(topMovies.data.results);
 
 
   return (
     <div className="top-movies">
+        <div className="container">
         {
-            topMovies.
+            topMovies.isFetched ? (
+                <div className="movie-list">
+                    {
+                        topMovies.data.results.map((movie, index) => (
+                            <MovieCard
+                              id={movie.id}
+                              title={movie.title}
+                              imgLink={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                              rating={movie.vote_average}
+                              releaseDate={movie.release_date}
+                              key={index}
+                            />
+                        ))
+                    }
+                </div>
+            ) : (
+                <p>Loading...</p>
+            )
         }
-      <h1>Top Movies</h1>
+        </div>
     </div>
   );
 };
