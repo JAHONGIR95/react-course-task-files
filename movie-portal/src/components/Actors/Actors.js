@@ -4,7 +4,7 @@ import './Actors.scss';
 const Actors = ({id, imgLink, name}) => {
     return(
 
-        <Link to={`/movie/${id}`} className="actor-card">
+        <Link to={`/person/${id}`} className="actor-card">
             <div className="actor-img-holder">
                 <img src={`https://image.tmdb.org/t/p/w500${imgLink}`} alt="Actor-image" className="actor-img"/>
             </div>

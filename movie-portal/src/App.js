@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/tv-shows" component={TvShow}/> 
           <Route exact path="/movie/:id" component={SingleMovie}/> 
           <Route exact path="/tv-show/:id" component={SingleShow}/> 
-          <Route exact path="/movie/:id" component={ActorMovie}/> 
+          <Route exact path="/person/:id" component={ActorMovie}/> 
         </Switch>
       </Router>
     </div>
