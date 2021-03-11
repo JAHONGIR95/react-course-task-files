@@ -15,6 +15,8 @@ const Header = () => {
             <div className="header-links">
                 <Link to="/movies" className="header-link">Movies</Link>
                 <Link to="/tv-shows" className="header-link">TV Shows</Link>
+                <Link to="/latest-movies" className="header-link">Latest Movies</Link>
+                <Link to="/top-movies" className="header-link">Top Movies</Link>
             </div>
 
             <form className="header-form">

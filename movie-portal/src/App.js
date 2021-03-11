@@ -12,7 +12,9 @@ import {
   TvShow,
   SingleMovie,
   SingleShow,
-  ActorMovie
+  ActorMovie,
+  LatestMovie,
+  TopMovies
 } from './pages';
 
 import Header from './containers/Header';
@@ -31,6 +33,8 @@ function App() {
           <Route exact path="/movie/:id" component={SingleMovie}/> 
           <Route exact path="/tv-show/:id" component={SingleShow}/> 
           <Route exact path="/person/:id" component={ActorMovie}/> 
+          <Route exact path="/latest-movies" component={LatestMovie}/> 
+          <Route exact path="/top-movies" component={TopMovies}/> 
         </Switch>
       </Router>
     </div>
