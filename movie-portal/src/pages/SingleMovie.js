@@ -53,7 +53,7 @@ const SingleMovie = ({ match }) => {
         },
       })
       .then(function (response) {
-        // console.log(response)
+        console.log(response)
         setMovieActors({
           isFetched: true,
           data: response.data,
@@ -72,7 +72,7 @@ const SingleMovie = ({ match }) => {
       });
   }, []);
 
-  console.log(MovieActors.data.cast);
+  // console.log((MovieActors.data.cast).slice(0, 10));
   const mData = MovieInfo.data;
 
   return (
@@ -110,7 +110,7 @@ const SingleMovie = ({ match }) => {
           {MovieActors.isFetched ? (
             <div className="movie-list">
               {
-                MovieActors.data.cast.map((actor, index) => (
+                ((MovieActors.data.cast).slice(0, 12)).map((actor, index) => (
                   <Actors
                     id={actor.id}
                     imgLink={actor.profile_path}
