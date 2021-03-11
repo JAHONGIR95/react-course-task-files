@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import MovieCard from '../components/MovieCard'
+
 import "./pages.scss";
 
 const ActorMovie = ({ match }) => {
@@ -12,13 +14,16 @@ const ActorMovie = ({ match }) => {
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/person/${match.params.id}/movie_credits`, {
-        params: {
-          api_key: "d2a8ca5d342a4ac27541b9319d594c83",
-        },
-      })
+      .get(
+        `https://api.themoviedb.org/3/person/${match.params.id}/movie_credits`,
+        {
+          params: {
+            api_key: "d2a8ca5d342a4ac27541b9319d594c83",
+          },
+        }
+      )
       .then(function (response) {
-        //   console.log(response);
+          console.log(response);
         setActorMovie({
           isFetched: true,
           data: response.data,
@@ -37,11 +42,36 @@ const ActorMovie = ({ match }) => {
       });
   }, []);
 
-//   console.log(actorMovie.data.cast[0].title);
+    console.log('actorlar ' + actorMovie);
 
   return (
-      <h1>Title: {actorMovie.data.cast.title}</h1>
-  )
+    <div className="actors-movie-section">
+      <div className="container">
+          {
+              actorMovie.isFetched ? (
+                <div className="movie-list">
+                    {
+                        actorMovie.data.cast.map((movie, index) => (
+                            <MovieCard
+                              id={movie.id}
+                              title={movie.title}
+                              imgLink={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                              rating={movie.vote_average}
+                              releaseDate={movie.release_date}
+                              key={index}
+                            />
+                        ))
+                    }
+                </div>
+              ) : (
+                  <p>Loading...</p>
+              )
+          }         
+
+        <h1>hello</h1>
+      </div>
+    </div>
+  );
 };
 
 export default ActorMovie;
