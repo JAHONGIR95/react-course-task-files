@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import logo from '../../assets/Images/Icons/cinerama.svg';
+
 import './Header.scss';
  
 const Header = () => {
@@ -9,7 +11,7 @@ const Header = () => {
             <div className="container">
 
             <Link to="/" className="header-logo">
-                <img src="" alt="Logo"/>
+                <img src={logo} className="logo" alt="Logo"/>                
             </Link>
 
             <div className="header-links">

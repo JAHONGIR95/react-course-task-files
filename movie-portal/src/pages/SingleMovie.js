@@ -170,9 +170,7 @@ const SingleMovie = ({ match }) => {
           <div className="container">
             {recommendedMovies.isFetched ? (
               <div className="movie-list">
-                {recommendedMovies.data.results
-                  .slice(0, 12)
-                  .map((movie, index) => (
+                {recommendedMovies.data.results.slice(0, 12).map((movie, index) => (
                     <MovieCard
                       id={movie.id}
                       title={movie.title}
