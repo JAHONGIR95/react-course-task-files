@@ -1,12 +1,14 @@
 .header{
     background-color: #16151A;
-    margin-bottom: 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     
     .container{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px;
+        padding: 17px 15px;
     }
 
     .header-logo{
@@ -32,8 +34,34 @@
 
     &-form{
 
-        width: 150px;
+        width: 170px;
         display: flex;
+        background-color: #fff;
+        height: 35px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .header-input{
+            width: 130px;
+            border: none;
+            outline: none;
+            padding: 0 5px 0 15px;
+        }
+
+        .header-search-btn{
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-left: 2px solid #000;
+
+            &:focus,
+            &:active{
+                outline: none;
+                background-color: #e6e6e6;
+            }
+        }
 
     }
 }

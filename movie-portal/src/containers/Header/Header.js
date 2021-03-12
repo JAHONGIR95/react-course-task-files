@@ -24,7 +24,7 @@ const Header = () => {
 
             <form className="header-form">
                 <input type="search" className="header-input" placeholder="Input here"/>
-                <button type="submit" className="header-search-btn">Search</button>
+                <button type="submit" className="header-search-btn">🔍</button>
             </form>
 
             </div>
