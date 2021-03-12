@@ -21,6 +21,7 @@ const LatestMovie = () => {
             },
           })
           .then(function (response) {
+            console.log(response);
             setLatestMovie({
               isFetched: true,
               data: response.data,
@@ -39,34 +40,34 @@ const LatestMovie = () => {
           });
       }, []);
 
-      console.log(latestMovie.data.length);
+      const movie = latestMovie.data;
 
     return (
         <div className="latest-movie">
             <div className="container">
                 {
-                    latestMovie.data.length > 0 ? (
+                    // movie.length > 0 ? (
                         latestMovie.isFetched ? (
                             <div className="movie-list">
                                 {
-                                    latestMovie.data.map((movie, index) => (
+                                  
                                         <MovieCard
                                           id={movie.id}
                                           title={movie.title}
                                           imgLink={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                                           rating={movie.vote_average}
                                           releaseDate={movie.release_date}
-                                          key={index}
+                                          // key={index}
                                         />
-                                    ))
+                                  
                                 }
                             </div>
                         ) : (
                             <p>Loading...</p>
                         )
-                    ) : (
-                        <h1>Sorry Movie is not found</h1>
-                    )
+                    // ) : (
+                        // <h1>Sorry Movie is not found</h1>
+                    // )
                 }
             </div>
             <h1>LatestMovie</h1>
