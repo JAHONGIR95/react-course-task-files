@@ -6,6 +6,7 @@ import SingleShow from './SingleShow';
 import ActorMovie from './ActorMovie';
 import LatestMovie from './LatestMovie';
 import TopMovies from './TopMovies';
+import UpcomingMovies from './UpcomingMovies';
 
 export {
     Home, 
@@ -15,5 +16,6 @@ export {
     SingleShow,
     ActorMovie,
     LatestMovie,
-    TopMovies
+    TopMovies,
+    UpcomingMovies
 } 

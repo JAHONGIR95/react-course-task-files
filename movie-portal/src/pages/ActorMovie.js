@@ -42,8 +42,6 @@ const ActorMovie = ({ match }) => {
       });
   }, []);
 
-    // console.log(('actor' + actorMovie.data.cast));
-
   return (
     <div className="actors-movie-section">
       <div className="container">
