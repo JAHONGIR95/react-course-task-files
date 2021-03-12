@@ -3,6 +3,9 @@ import axios from "axios";
 
 import GenresCard from "../components/GenresCard/GenresCard";
 import Actors from "../components/Actors/Actors";
+import MovieCard from "../components/MovieCard";
+
+import './pages.scss';
 
 const SingleMovie = ({ match }) => {
   const [MovieInfo, setMovieInfo] = useState({
@@ -53,7 +56,7 @@ const SingleMovie = ({ match }) => {
         },
       })
       .then(function (response) {
-        console.log(response)
+        // console.log(response)
         setMovieActors({
           isFetched: true,
           data: response.data,
@@ -74,6 +77,46 @@ const SingleMovie = ({ match }) => {
 
   // console.log((MovieActors.data.cast).slice(0, 10));
   const mData = MovieInfo.data;
+
+  // recommended movies list
+
+  const [recommendedMovies, setrecommendedMovies] = useState({
+    isFetched: false,
+    data: [],
+    error: null,
+  });
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${match.params.id}/recommendations`,
+        {
+          params: {
+            api_key: "d2a8ca5d342a4ac27541b9319d594c83",
+          },
+        }
+      )
+      .then(function (response) {
+        console.log(response);
+        setrecommendedMovies({
+          isFetched: true,
+          data: response.data,
+          error: false,
+        });
+      })
+      .catch(function (error) {
+        setrecommendedMovies({
+          isFetched: true,
+          data: [],
+          error: error,
+        });
+      })
+      .then(function () {
+        // always executed
+      });
+  }, []);
+
+  console.log(recommendedMovies);
 
   return (
     <div className="single-movie-section">
@@ -109,20 +152,41 @@ const SingleMovie = ({ match }) => {
         <div className="movie-actor-holder">
           {MovieActors.isFetched ? (
             <div className="movie-list">
-              {
-                ((MovieActors.data.cast).slice(0, 12)).map((actor, index) => (
-                  <Actors
-                    id={actor.id}
-                    imgLink={actor.profile_path}
-                    name={actor.original_name}
-                    key={index}
-                  />
-                  ))
-              }
+              {MovieActors.data.cast.slice(0, 12).map((actor, index) => (
+                <Actors
+                  id={actor.id}
+                  imgLink={actor.profile_path}
+                  name={actor.original_name}
+                  key={index}
+                />
+              ))}
             </div>
           ) : (
             <p>Loading...</p>
           )}
+        </div>
+
+        <div className="recommended-movies-holder">
+          <div className="container">
+            {recommendedMovies.isFetched ? (
+              <div className="movie-list">
+                {recommendedMovies.data.results
+                  .slice(0, 12)
+                  .map((movie, index) => (
+                    <MovieCard
+                      id={movie.id}
+                      title={movie.title}
+                      imgLink={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      rating={movie.vote_average}
+                      releaseDate={movie.release_date}
+                      key={index}
+                    />
+                  ))}
+              </div>
+            ) : (
+              <h1>Loading...</h1>
+            )}
+          </div>
         </div>
       </div>
     </div>
