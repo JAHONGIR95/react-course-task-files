@@ -3,6 +3,7 @@
     position: fixed;
     width: 100%;
     z-index: 10;
+    top: 0;
     
     .container{
         display: flex;
@@ -54,7 +55,7 @@
             align-items: center;
             justify-content: center;
             border: none;
-            border-left: 2px solid #000;
+            border-left: 1px solid #000;
 
             &:focus,
             &:active{
