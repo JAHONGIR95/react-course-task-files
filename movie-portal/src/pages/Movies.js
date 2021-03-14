@@ -41,28 +41,32 @@ const Movies = () => {
   console.log(movieList.data)
 
   return (
+    <div className="movies">
+
     <div className="container">
+    <p className="section-title">Movies result</p>
         {
-            movieList.isFetched ? (
-                <div className="movie-list"> 
+          movieList.isFetched ? (
+            <div className="movie-list"> 
                     {
-                        movieList.data.results.map((movie, index) => (
-                            <MovieCard
-                              id={movie.id}
-                              title={movie.title}
-                              imgLink={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                              rating={movie.vote_average}
-                              releaseDate={movie.release_date}
-                              key={index}
-                            />
+                      movieList.data.results.map((movie, index) => (
+                        <MovieCard
+                        id={movie.id}
+                        title={movie.title}
+                        imgLink={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        rating={movie.vote_average}
+                        releaseDate={movie.release_date}
+                        key={index}
+                        />
                         ))
-                    }
+                      }
                 </div>
             ) : (
-                <h1>Loading...</h1>
-            )
-        }
+              <h1>Loading...</h1>
+              )
+            }
     </div>
+</div>
   );
 };
 

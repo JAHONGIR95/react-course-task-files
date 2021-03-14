@@ -45,6 +45,7 @@ const TvShow = () =>{
     return(
         <div className="tv-shows">
             <div className="container">
+              <p className="section-title">TV Shows</p>
                 {
                     tvShows.isFetched ? (
                         <div className="movie-list">
