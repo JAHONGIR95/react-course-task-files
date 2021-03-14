@@ -44,6 +44,7 @@ const TopMovies = () => {
   return (
     <div className="top-movies">
         <div className="container">
+          <p className="section-title">Top Movies</p>
         {
             topMovies.isFetched ? (
                 <div className="movie-list">
