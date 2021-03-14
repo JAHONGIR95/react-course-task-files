@@ -45,6 +45,7 @@ const LatestMovie = () => {
     return (
         <div className="latest-movie">
             <div className="container">
+              <p className="section-title">Latest Movie</p>
                 {
                     // movie.length > 0 ? (
                         latestMovie.isFetched ? (
@@ -70,7 +71,6 @@ const LatestMovie = () => {
                     // )
                 }
             </div>
-            <h1>LatestMovie</h1>
         </div>
     )
 }
