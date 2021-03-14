@@ -38,36 +38,24 @@
         }
     }
 
-    &-form{
-
-        width: 170px;
-        display: flex;
-        background-color: #fff;
-        height: 35px;
-        border-radius: 20px;
-        overflow: hidden;
-
-        .footer-input{
-            width: 130px;
-            border: none;
-            outline: none;
-            padding: 0 5px 0 15px;
-        }
-
-        .footer-search-btn{
-            width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            border-left: 1px solid #000;
-
-            &:focus,
-            &:active{
-                outline: none;
-                background-color: #e6e6e6;
-            }
-        }
+    .footer-guarantee{
+        font-size: 14px;
+        color: rgb(185, 177, 177);
+        text-align: right;
+        line-height: 20px;
 
     }
+
+    // &-media{
+    //     display: flex;
+    //     width: 100px;
+        
+    //     &-link{
+    //         width: 25px;
+    //         height: 25px;
+    //         object-fit: contain;
+
+    //     }
+
+    // }
 }

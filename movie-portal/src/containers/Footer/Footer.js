@@ -6,8 +6,10 @@ import logo from '../../assets/Images/Icons/cinerama.svg';
 import {
     Facebook,
     Twitter,
-    Telegram
+    Telegram,
 } from '../../components/MediaIcons/MediaIcons';
+
+console.log(Facebook);
 
 const Footer = () => {
     return (
@@ -25,12 +27,16 @@ const Footer = () => {
                 <Link to="/upcoming-movies" className="footer-link">Upcoming Movies</Link>
             </div>
 
-            <div className="footer-media">
-                <Link to="/tele" className="footer-media"><img src={Facebook} alt="facebook"/></Link>
-                <Link to="/tele" className="footer-media"><img src={Twitter} alt="twitter"/></Link>
-                <Link to="/tele" className="footer-media"><img src={Telegram} alt="telegram"/></Link>
-            </div>
-                <h1>Footer</h1>
+            <p className="footer-guarantee">
+                All rights are reserved. <br/> Website is created in 2021.  
+            </p>
+
+            {/* <div className="footer-media">
+                <Link to="/tele" className="footer-media-link"><img src={Facebook} alt="facebook"/></Link>
+                <Link to="/tele" className="footer-media-link"><img src={Twitter} alt="twitter"/></Link>
+                <Link to="/tele" className="footer-media-link"><img src={Telegram} alt="telegram"/></Link>
+            </div> */}
+                
             </div>
         </div>
     )
