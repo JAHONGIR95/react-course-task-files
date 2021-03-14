@@ -151,7 +151,7 @@ const SingleMovie = ({ match }) => {
         <p className="section-title">Movie overview</p>
         <p className="movie-overview">{mData.overview}</p>
 
-        <p className="actor-title">Actors and Actresses</p>
+        <p className="section-title">Actors and Actresses</p>
         <div className="movie-actor-holder">
           {MovieActors.isFetched ? (
             <div className="movie-list">

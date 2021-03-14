@@ -83,13 +83,15 @@
     }
 
     .movie-overview{
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
         text-align: center;
         max-width: 700px;
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         line-height: 30px;
+        color: rgb(192, 159, 159);
+        text-shadow: .1px .2px .4px rgb(177, 151, 151);
     }
 
     .actor-title{
@@ -105,6 +107,8 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: 40px;
 
     }
     
