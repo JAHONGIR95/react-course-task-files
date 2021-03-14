@@ -45,6 +45,7 @@ const ActorMovie = ({ match }) => {
   return (
     <div className="actors-movie-section">
       <div className="container">
+        <p className="section-title">Actor Movies</p>
           {
               actorMovie.isFetched ? (
                 <div className="movie-list">
@@ -65,8 +66,6 @@ const ActorMovie = ({ match }) => {
                   <p>Loading...</p>
               )
           }         
-
-        <h1>hello</h1>
       </div>
     </div>
   );

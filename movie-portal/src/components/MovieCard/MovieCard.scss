@@ -4,8 +4,11 @@
     position: relative;
     text-decoration: none;
     margin-bottom: 30px;
+    background-color: #17212B;
     
     &:hover{
+
+        background-color: #242F3D;
 
         // border: 1px solid #fff;
         .card-title{
@@ -51,12 +54,15 @@
         transition: all ease .3s;
         font-size: 18px;
         font-weight: 500;
+        padding-left: 7px;
     }
 
     .card-date{
         color: #8e8e8f;
         transition: all ease .3s;
         font-weight: 500;
+        padding-left: 7px;
+        padding-bottom: 4px;
 
     }
 }
