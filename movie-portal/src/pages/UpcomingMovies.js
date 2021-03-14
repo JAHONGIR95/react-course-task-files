@@ -45,6 +45,7 @@ const UpcomingMovies = () => {
 
         <div className="upcomingMovies">
             <div className="container">
+              <p className="section-title">Upcoming Movies</p>
                 {
                     upcomingMovies.isFetched ? (
                         <div className="movie-list">
