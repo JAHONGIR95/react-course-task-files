@@ -169,6 +169,7 @@ const SingleMovie = ({ match }) => {
           )}
         </div>
 
+        <p className="section-title">Recommended Movies</p>
         <div className="recommended-movies-holder">
           <div className="container">
             {recommendedMovies.isFetched ? (

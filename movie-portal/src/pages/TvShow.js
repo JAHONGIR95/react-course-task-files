@@ -68,11 +68,7 @@ const TvShow = () =>{
 
 
             </div>
-
-
-            <h1>TvShow</h1>
         </div>
-
     )
 }
 
