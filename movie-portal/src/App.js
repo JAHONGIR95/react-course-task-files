@@ -19,6 +19,7 @@ import {
 } from './pages';
 
 import Header from './containers/Header';
+import Footer from './containers/Footer'
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
           <Route exact path="/top-movies" component={TopMovies}/> 
           <Route exact path="/upcoming-movies" component={UpcomingMovies}/> 
         </Switch>
+
+        <Footer/>
       </Router>
     </div>
   );
