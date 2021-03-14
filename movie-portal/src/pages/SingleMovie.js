@@ -121,6 +121,7 @@ const SingleMovie = ({ match }) => {
   return (
     <div className="single-movie-section">
       <div className="container">
+        <p className="section-title">Movie info</p>
         <div className="single-movie-top">
           <div className="single-movie-top-left">
             <img
@@ -134,6 +135,7 @@ const SingleMovie = ({ match }) => {
             <h3 className="movie-duration">{`Duration  ${Math.floor(
               mData.runtime / 60
             )} hour ${mData.runtime % 60} minute`}</h3>
+            <p className="genre">genres</p>
             <div className="genre-holder">
               {MovieInfo.isFetched ? (
                 mData.genres.map((ganr, index) => (
@@ -146,6 +148,7 @@ const SingleMovie = ({ match }) => {
           </div>
         </div>
 
+        <p className="section-title">Movie overview</p>
         <p className="movie-overview">{mData.overview}</p>
 
         <p className="actor-title">Actors and Actresses</p>

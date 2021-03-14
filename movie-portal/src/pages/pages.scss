@@ -7,13 +7,34 @@
 }
 
 .single-movie-section{
+    padding-top: 50px;
     background-color: #16151A;
     
+    .section-title{
+        color: #f1f1f1;
+        text-transform: uppercase;
+        font-weight: 550;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+
+    }
+
     .single-movie-top{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+    }
+
+    .single-movie-top-left{
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.836);
+        transition: all ease .3s;
+
+        &:hover{
+            box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.836);
+        }
+
     }
 
     .single-movie-top-right{
@@ -26,13 +47,30 @@
         
         .movie-title{
             margin-bottom: 25px;
-            font-size: 40px;
+            font-size: 35px;
+            color: #dbdbdb;
+            letter-spacing: 1px;
         }
 
         .movie-date,
         .movie-duration{
             margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 18px;
+            color: #e3e3e9;
+            font-weight: 500;
+        }
+
+        .movie-duration{
+            margin-bottom: 25px;
+        }
+
+        .genre{
+            color: #f1f1f1;
+            text-transform: uppercase;
+            font-weight: 550;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-bottom: 0px;
         }
 
         .genre-holder{
