@@ -19,7 +19,7 @@ class OverviewGraph extends React.Component {
                   <GraphTop/>
                   <GraphRight rightTitle="real" rightPoint="123"/>
                   <GraphRight rightTitle="real" rightPoint="123"/>
-                  <GraphRight rightTitle="real" rightPoint="123"/>
+                  <GraphRight className="last-child" rightTitle="real" rightPoint="123"/>
                   <GraphMain/>
               </div>
           )

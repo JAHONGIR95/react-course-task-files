@@ -12,8 +12,8 @@ class GraphRight extends React.Component {
       render(){
           return(
               <div className="graph-right">
-                <p className="right-title">{this.rightTitle}</p>
-                <h1 className="right-point">{this.rightPoint}</h1>
+                <p className="graph-right-title">{this.rightTitle}</p>
+                <h1 className="graph-right-point">{this.rightPoint}</h1>
               </div>
           )
       }

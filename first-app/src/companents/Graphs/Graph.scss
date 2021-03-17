@@ -1,4 +1,31 @@
 .graph-right{
     width: 342px;
-    padding: 24px 32px;
+    padding: 32px 0 24px 0;
+    border-left: 1px solid #DFE0EB;
+    border-bottom: 1px solid #DFE0EB;
+  
+    &.last-child{
+        border-bottom: 1px solid transparent;
+    }
+
+    &-title{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        color: #9FA2B4;
+        margin-bottom: 6px;
+    }
+
+    &-point{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        color: #252733;
+    }
 }
