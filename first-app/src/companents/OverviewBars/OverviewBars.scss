@@ -1,0 +1,40 @@
+.bar-holder{
+    background: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 258px;
+    padding: 24px 32px;
+    text-align: center;
+    transition: all ease .4s;
+
+    &:hover{
+        border: 1px solid #3751FF;
+    }
+
+    &:hover .bar-point,
+    &:hover .bar-title{
+        color: #3751FF;
+    }
+
+
+    .bar-title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.4px;
+        color: #9FA2B4;
+    }
+
+    .bar-point{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #252733;
+    }
+}
