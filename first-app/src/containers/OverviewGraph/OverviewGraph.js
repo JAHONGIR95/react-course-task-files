@@ -17,9 +17,11 @@ class OverviewGraph extends React.Component {
               <div className="overview-graph">
                   <h1>overview graph</h1>
                   <GraphTop/>
-                  <GraphRight rightTitle="real" rightPoint="123"/>
-                  <GraphRight rightTitle="real" rightPoint="123"/>
-                  <GraphRight className="last-child" rightTitle="real" rightPoint="123"/>
+                  <GraphRight rightTitle="Resolved" rightPoint="449"/>
+                  <GraphRight rightTitle="Received" rightPoint="426"/>
+                  <GraphRight rightTitle="Average first response time" rightPoint="33m"/>
+                  <GraphRight rightTitle="Average response time" rightPoint="3h 8m"/>
+                  <GraphRight className="last-child" rightTitle="Resolution within SLA" rightPoint="94%"/>
                   <GraphMain/>
               </div>
           )
