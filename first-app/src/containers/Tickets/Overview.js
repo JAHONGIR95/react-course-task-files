@@ -20,6 +20,9 @@ class Overview extends Component {
           <OverviewBars barTitle="Open" barPoint="43" />
           <OverviewBars barTitle="On hold" barPoint="64" />
         </div>
+        <div className="overview-middle">
+            
+        </div>
       </div>
     );
   }
