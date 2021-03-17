@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 import OverviewBars from "../../companents/OverviewBars/OverviewBars";
+import OverviewGraph from '../OverviewGraph/OverviewGraph';
 
 import "./main.scss";
 
@@ -21,7 +22,7 @@ class Overview extends Component {
           <OverviewBars barTitle="On hold" barPoint="64" />
         </div>
         <div className="overview-middle">
-            
+            <OverviewGraph/>
         </div>
       </div>
     );
