@@ -12,7 +12,6 @@ class Graph extends React.Component {
                   <div className="top-right">
                       <h3 className="top-title">Today’s trends</h3>
                       <p className="top-info">as of 25 May 2019, 09:41 PM</p>
-
                   </div>
                   <div className="top-left">
                     <p className="day"><span className="line1"></span>Today</p>

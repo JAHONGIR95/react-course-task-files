@@ -1,8 +1,9 @@
 .graph-right{
     width: 342px;
-    padding: 32px 0 24px 0;
+    padding: 0;
     border-left: 1px solid #DFE0EB;
     border-bottom: 1px solid #DFE0EB;
+    box-sizing: border-box;
   
     &.last-child{
         border-bottom: 1px solid transparent;
@@ -17,6 +18,7 @@
         letter-spacing: 0.3px;
         color: #9FA2B4;
         margin-bottom: 6px;
+        padding-top: 32px;
     }
 
     &-point{
@@ -27,5 +29,75 @@
         text-align: center;
         letter-spacing: 0.3px;
         color: #252733;
+        margin-bottom: 24px;
     }
+}
+
+.graph-top{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 32px;
+    width: 100%;
+
+    .top-right{
+
+        .top-title{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+            color: #252733;
+            margin-bottom: 8px;
+        }
+
+        .top-info{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.1px;
+            color: #9FA2B4;
+
+        }
+    }
+
+    .top-left{
+
+        display: flex;
+        .day{
+
+            display: flex;
+            align-items: center;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.1px;
+            color: #9FA2B4;
+
+            .line1,
+            .line2 {
+                width: 16px;
+                height: 3px;
+                border-radius: 5px;
+                background-color: #3751FF;
+                display: block;
+                margin-right: 12px;
+            }
+
+            .line2{
+                background-color: #DFE0EB;
+            }
+
+            &:first-child{
+                margin-right: 56px;
+            }
+        }
+    }
+}
+
+.graph-main{
+    padding: 32px;
 }
