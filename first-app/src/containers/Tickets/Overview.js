@@ -24,6 +24,9 @@ class Overview extends Component {
         <div className="overview-middle">
             <OverviewGraph/>
         </div>
+        <div className="overview-bottom">
+          
+        </div>
       </div>
     );
   }

@@ -19,7 +19,7 @@ class OverviewGraph extends React.Component {
                     <GraphTop/>
                     <GraphMain/>
                   </div>
-                  <div className="graph-right">
+                  <div className="graph-right-side">
                     <GraphRight rightTitle="Resolved" rightPoint="449"/>
                     <GraphRight rightTitle="Received" rightPoint="426"/>
                     <GraphRight rightTitle="Average first response time" rightPoint="33m"/>

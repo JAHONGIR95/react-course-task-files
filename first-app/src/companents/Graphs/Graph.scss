@@ -4,9 +4,14 @@
     border-left: 1px solid #DFE0EB;
     border-bottom: 1px solid #DFE0EB;
     box-sizing: border-box;
+    background-color: transparent;
+    transition: all ease .5s;
   
     &.last-child{
         border-bottom: 1px solid transparent;
+    }
+    &:hover{
+        background-color: #DFE0EB;
     }
 
     &-title{
@@ -38,7 +43,7 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 32px;
-    width: 100%;
+    width: 700px;
 
     .top-right{
 
