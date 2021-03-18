@@ -2,6 +2,10 @@ import { Component } from "react";
 
 import OverviewBars from "../../companents/OverviewBars/OverviewBars";
 import OverviewGraph from '../OverviewGraph/OverviewGraph';
+import {
+  BottomLeft,
+  BottomRight
+} from '../../companents/OverviewBottom';
 
 import "./main.scss";
 
@@ -25,7 +29,8 @@ class Overview extends Component {
             <OverviewGraph/>
         </div>
         <div className="overview-bottom">
-          
+          <BottomLeft/>
+          <BottomRight/>
         </div>
       </div>
     );
