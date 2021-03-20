@@ -9,7 +9,7 @@ class BottomLeft extends React.Component {
     render(){
         
         return(
-            <div className="overview-bottom">
+            <div className="overview-bottom-left">
                 <div className="title">
                     <div className="title-left">
                         <h3 className="title-top">Unresolved tickets</h3>
