@@ -1,7 +1,12 @@
+import TopBar from './container/Appbar';
+import './Assets/styles/styles.scss';
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <>
+      <TopBar/>
+      <h1>Hello</h1>
+    </>
   );
 }
 
