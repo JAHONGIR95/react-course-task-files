@@ -1,3 +1,5 @@
+import TodoItem from './Components/TodoItem/binder';
+
 import './Assets/styles/App.scss';
 
 function App() {
@@ -15,12 +17,14 @@ function App() {
             <button type="submit" className="btn btn-success">Qo'shish</button>
           </form>
           
+          <TodoItem.Group>
+            <TodoItem.Options title="Kir yuvish"/>
+            <TodoItem.Options title="Uyni tozalash"/>
+            <TodoItem.Options title="Counter oynash"/>
+            <TodoItem.Options title="Dars qilish"/>
+          </TodoItem.Group>
             
-            <li className="list-group-item">Salom</li>
-            <li className="list-group-item">Salom</li>
-            <li className="list-group-item">Salom</li>
-            <li className="list-group-item">Salom</li>
-          </ul>
+            
         </div>
         <div className="card-footer d-flex justify-content-end">
           <button className="btn btn-danger me-3">Tozalash</button>
