@@ -1,3 +1,5 @@
+import './main.scss';
+
 const Options = ({title, id}) => {
     return(
         <li className="list-group-item d-flex align-items-center justify-content-between">

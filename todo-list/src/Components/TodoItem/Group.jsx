@@ -1,3 +1,5 @@
+import './main.scss';
+
 const Group = ({children}) =>{
     return(
         <ul className="list-group mt-3">
