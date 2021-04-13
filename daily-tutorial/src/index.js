@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './CountClass';
+import App from './AngelaYu';
 
 ReactDOM.render(
   <React.StrictMode>
