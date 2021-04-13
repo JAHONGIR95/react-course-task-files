@@ -1,10 +1,12 @@
 import Home from './pages/Home';
 
+
+import './assets/styles/App.scss';
+
 function App() {
   return (
     <div className="App">
       <Home />
-      <h1>App.js file</h1>
     </div>
   );
 }
