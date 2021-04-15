@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Home() {
+function Trending() {
     return (
         <div>
-            <h1>This is home page</h1>
+            <h1>Trending</h1>
         </div>
     )
 }
 
-export default Home
+export default Trending

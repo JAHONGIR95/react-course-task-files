@@ -1,0 +1,38 @@
+.sidebar-button{
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 32px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all ease .3;
+    border: none;
+    outline: none;
+
+    &:hover{
+
+        .sidebar-icon{
+            fill: #FF0000;
+        }
+
+        .sidebar-title{
+            color: #FF0000;
+        }
+
+    }
+
+    .sidebar-icon{
+        margin-right: 15px;
+        fill: rgba(255, 255, 255, 0.4);
+    }
+
+    .sidebar-title{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        mix-blend-mode: normal;
+    }
+}
