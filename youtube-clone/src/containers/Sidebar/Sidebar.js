@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 import {
     Home,
@@ -15,22 +15,24 @@ import {
     ShowMore
 } from '../../components/SidebarIcons/SidebarIcons';
 import SidebarBtn from '../../components/SidebarBtn/SidebarBtn';
+import BurgerBtn from '../../components/BurgerBtn/BurgerBtn';
 
 import './Sidebar.scss';
 
 function Sidebar() {
     return (
         <div className="sidebar">
+            <BurgerBtn />
             <div className="icons">
-                <Link to="/">
+                <NavLink exact to="/" activeClassName="selected">
                     <SidebarBtn title="Home" icon={<Home />}/>
-                </Link>
-                <Link to="/trending">
+                </NavLink>
+                <NavLink to="/trending" activeClassName="selected">
                     <SidebarBtn title="Trending" icon={<Trending />}/>
-                </Link>
-                <Link  to="/watchLater">
+                </NavLink>
+                <NavLink  to="/watchLater" activeClassName="selected">
                     <SidebarBtn title="Subscriptions" icon={<Subscriptions />}/>
-                </Link>
+                </NavLink>
                 <SidebarBtn title="Library" icon={<Library />}/>
                 <SidebarBtn title="History" icon={<History />}/>
                 <SidebarBtn title="Watch later" icon={<WatchLater />}/>
