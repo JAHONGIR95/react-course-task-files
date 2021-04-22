@@ -14,21 +14,36 @@ function App() {
     if(todoText.length > 0){
       todosList.push(
         {
-         id: 0,
+         id: todosList.length > 0 ? todosList[todosList.length - 1].id + 1 : 0,
          title: todoText
         }
        )
     }
      setTodoText('');
-    // console.log(todosList);
+    console.log(todosList);
   }
 function localStorage(){
-  alert('saqlandi')
   window.localStorage.setItem('todosInfo', JSON.stringify(todosList))
 }
 
-useEffect(()=>{
+const handleDeleteAll = () => {
+  setTodosList([]);
+  window.localStorage.removeItem('todosInfo')
+}
+
+const handleDelete = (id) => {
+  let deletingItemIndex = todosList.findIndex(todo => todo.id === id);
+  todosList.splice(deletingItemIndex, 1);
+  window.localStorage.setItem('todosInfo', JSON.stringify(todosList));
   setTodosList(JSON.parse(window.localStorage.getItem('todosInfo')))
+  console.log(todosList);
+}
+
+useEffect(()=>{
+  if(window.localStorage.getItem('todosInfo')){
+    
+    setTodosList(JSON.parse(window.localStorage.getItem('todosInfo')))
+  }
 }, [])
 
   return (
@@ -52,17 +67,19 @@ useEffect(()=>{
           
           <TodoItem.Group>
            {
-             todosList.map((item) => (
+             todosList.map((item, index) => (
                <TodoItem.Options
+                id={item.id}
                 title={item.title}
-                key={item.id}
+                key={index}
+                handleDelete={handleDelete}
               />
              ))
            }
           </TodoItem.Group>
         </div>
         <div className="card-footer d-flex justify-content-end">
-          <button className="btn btn-danger me-3">Tozalash</button>
+          <button className="btn btn-danger me-3" onClick={handleDeleteAll}>Tozalash</button>
           <button className="btn btn-primary" onClick={localStorage}>Saqlash</button>
         </div>
       </div>

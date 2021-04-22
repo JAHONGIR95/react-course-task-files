@@ -24,13 +24,13 @@ function Sidebar() {
         <div className="sidebar">
             <BurgerBtn />
             <div className="icons">
-                <NavLink exact to="/" activeClassName="selected">
+                <NavLink exact className="link" to="/" activeClassName="selected">
                     <SidebarBtn title="Home" icon={<Home />}/>
                 </NavLink>
-                <NavLink to="/trending" activeClassName="selected">
+                <NavLink className="link" to="/trending" activeClassName="selected">
                     <SidebarBtn title="Trending" icon={<Trending />}/>
                 </NavLink>
-                <NavLink  to="/watchLater" activeClassName="selected">
+                <NavLink  className="link" to="/watchLater" activeClassName="selected">
                     <SidebarBtn title="Subscriptions" icon={<Subscriptions />}/>
                 </NavLink>
                 <SidebarBtn title="Library" icon={<Library />}/>
