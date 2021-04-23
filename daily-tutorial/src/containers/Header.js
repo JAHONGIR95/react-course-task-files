@@ -12,19 +12,30 @@ function Header({ sidebarState, setSidebarState }) {
             <button onClick={() => setSidebarState(!sidebarState)}>Burger</button>
             <h1>Header</h1>
             <div className="navbar">
-                <Link
-                    className={`header-link ${}`}
-                    to="/">
-                    onClick={()=> setActivePage('/')}
+                <Link to="/"
+                    className={`header-link ${activePage == "/" ? 'active' : ''}`}
+                    onClick={ ()=> setActivePage('/')}
+                    >
                     Home
                 </Link>
-                <Link className="header-link" to="/contacts">
-                    Contacts
+                <Link 
+                    to="/contacts"
+                    className={`header-link ${activePage == "/contacts" ? 'active' : ''}`}
+                    onClick={ ()=> setActivePage('/contacts')}
+                   > Contacts
                 </Link>
-                <Link className="header-link" to="/master">
+                <Link 
+                    className={`header-link ${activePage == "/master" ? 'active' : ''}`}
+                    onClick={ ()=> setActivePage('/master')} 
+                    to="/master"
+                    >
                     Master
                 </Link>
-                <Link className="header-link" to="/about">
+                <Link 
+                    className={`header-link ${activePage == "/about" ? 'active' : ''}`}
+                    onClick={ ()=> setActivePage('/about')}
+                    to="/about"
+                >
                     About
                 </Link>
             </div>
