@@ -2,9 +2,9 @@ import React from 'react'
 
 import './main.scss';
 
-function Sidebar() {
+function Sidebar({ sidebarState }) {
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${sidebarState ? 'active' : ''}`}>
             <h1>Sidebar</h1>
         </div>
     )

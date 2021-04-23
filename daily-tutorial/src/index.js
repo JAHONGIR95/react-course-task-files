@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
 
-import Header from './containers/Header';
-import Sidebar from './containers/Sidebar';
+import App from './App';
 
 import './App.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Sidebar />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
