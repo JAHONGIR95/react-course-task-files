@@ -13,12 +13,23 @@
         margin-right: 25px;
     }
 
+    h1{
+        margin-right: 30px;
+    }
+
     .navbar{
 
         .header-link{
             font-size: 20px;
-            padding: 20px;
+            padding: 10px 20px;
             text-decoration: none;
+            border: 1px solid #fff;
+            margin-right: 15px;
+
+            &.active, &:hover{
+                background-color: green;
+                color: #fff;
+            }
         }
     }
 }
@@ -27,11 +38,22 @@
 .sidebar{
     width: 0;
     height: 100vh;
-    background-color: #000;
+    background-color: rgb(97, 91, 91);
     position: fixed;
     transition: all ease .5s;
+    top: 0;
+    left: 0;
+    bottom: 0;
 
     &.active{
         width: 250px;
     }
+}
+
+.main-section{
+    padding-top: 97px;
+    background-color: #ccc;
+    width: 100%;
+    
+
 }

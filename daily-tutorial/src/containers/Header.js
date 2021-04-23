@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import './main.scss';
 
 function Header({ sidebarState, setSidebarState }) {
+
+    const [activePage, setActivePage] = useState('')
+
     return (
         <div className="header">
             <button onClick={() => setSidebarState(!sidebarState)}>Burger</button>
             <h1>Header</h1>
             <div className="navbar">
-                <Link className="header-link" to="/">
+                <Link
+                    className={`header-link ${}`}
+                    to="/">
+                    onClick={()=> setActivePage('/')}
                     Home
                 </Link>
                 <Link className="header-link" to="/contacts">
