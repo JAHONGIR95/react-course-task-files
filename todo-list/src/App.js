@@ -18,6 +18,9 @@ function App() {
          title: todoText
         }
        )
+       window.localStorage.setItem('todosInfo', JSON.stringify(todosList));
+
+      //  window.localStorage.setItem('todosInfo', JSON.stringify(todosList))
     }
      setTodoText('');
     console.log(todosList);
@@ -66,16 +69,22 @@ useEffect(()=>{
           </form>
           
           <TodoItem.Group>
-           {
-             todosList.map((item, index) => (
-               <TodoItem.Options
-                id={item.id}
-                title={item.title}
-                key={index}
-                handleDelete={handleDelete}
-              />
-             ))
-           }
+            {
+              // todosList.length > 0 ? (
+              //   {
+                  todosList.map((item, index) => (
+                    <TodoItem.Options
+                      title={item.title}
+                      id={item.id}
+                      key={index}
+                      handleDelete={handleDelete}
+                    />
+                  ))
+              //   }
+              // ) : (
+              //   <p>...</p>
+              // )
+            }
           </TodoItem.Group>
         </div>
         <div className="card-footer d-flex justify-content-end">
