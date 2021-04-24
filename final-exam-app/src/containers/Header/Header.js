@@ -5,11 +5,11 @@ import styles from './Header.module.scss';
 
 import KiwiLogo from '../../assets/images/kiwi-logo.svg';
 
-function Header({ logoText, navbar }) {
+function Header({ logoText, navbar, headerBottom }) {
     return (
         <div className={styles.header} >
             <div className={styles.headerTop}>
-                <Link to="/" className={styles. logoWrapper}>
+                <Link to="/" className={styles.logoWrapper}>
                     <img className={styles.kiwiLogo} src={KiwiLogo} alt=""/>
                     <h3 className={styles.logoText}>{logoText}</h3>
                 </Link>
@@ -28,7 +28,7 @@ function Header({ logoText, navbar }) {
             </div>
 
             <div className="header-bottom">
-
+                { headerBottom }
             </div>
         </div>
     )
