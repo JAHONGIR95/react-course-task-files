@@ -28,7 +28,7 @@ function HeaderBottom() {
                 <button type="submit" className={styles.submitButton}>Найти</button>
             </form>
             <div className={styles.adding}>
-                <button className={styles.addingButton}></button>
+                <button className={styles.addingButton}>+</button>
                 <p className={styles.addingText}>Добавить обьявления</p>
             </div>
         </div>

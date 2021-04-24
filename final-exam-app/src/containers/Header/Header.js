@@ -27,7 +27,7 @@ function Header({ logoText, navbar, headerBottom }) {
                 
             </div>
 
-            <div className="header-bottom">
+            <div>
                 { headerBottom }
             </div>
         </div>
