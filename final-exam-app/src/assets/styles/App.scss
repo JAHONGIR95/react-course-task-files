@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Galien';
+    src: url('../fonts/Galien-Regular.eot');
+    src: url('../fonts/Galien-Regular.eot') format('embedded-opentype'),
+        url('../fonts/Galien-Regular.woff2') format('woff2'),
+        url('../fonts/Galien-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galien';
+    src: url('../fonts/Galien-Regular_1.eot');
+    src: url('../fonts/Galien-Regular_1.eot') format('embedded-opentype'),
+        url('../fonts/Galien-Regular_1.woff2') format('woff2'),
+        url('../fonts/Galien-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.eot');
+    src: url('../fonts/Gilroy-ExtraBold.eot') format('embedded-opentype'),
+        url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galien';
+    src: url('../fonts/Galien-Regular_2.eot');
+    src: url('../fonts/Galien-Regular_2.eot') format('embedded-opentype'),
+        url('../fonts/Galien-Regular_2.woff2') format('woff2'),
+        url('../fonts/Galien-Regular_2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.eot');
+    src: url('../fonts/Gilroy-Light.eot') format('embedded-opentype'),
+        url('../fonts/Gilroy-Light.woff2') format('woff2'),
+        url('../fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy', 'Galien', sans-serif;
+
+
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
