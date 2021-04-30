@@ -30,8 +30,9 @@ const Tickets = () => {
             <Sidebar activePage={activePage} setActivePage={setActivePage}/>
             <div className="content">
                 <Header activePage={activePage}/>
+                {/* <h1>hammaga salom</h1> */}
                 <Switch>
-                    <Route path="/tickets" component={TicketsItem}/>
+                    <Route exact path="/tickets" component={TicketsItem}/>
                     <Route path="/overview" component={Overview}/>
                     <Route path="/subscription" component={Subscription}/>
                     <Route path="/agents" component={Agents}/>
